@@ -30,6 +30,7 @@ module MultiExiftool
     # processed.
     def command
       cmd = [exiftool_command]
+      cmd << ['-charset', 'FileName=cp1252']
       cmd << options_args
       cmd << values_args
       cmd << escaped_filenames
